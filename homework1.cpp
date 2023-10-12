@@ -17,5 +17,4 @@ int main() {
 	int length ;
 	cout << "你要输入几个数:" << endl;
 	cin >> length;
-	int numbers[length];
-		
+	int numbers[length];}

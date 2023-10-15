@@ -1,6 +1,6 @@
 #include<iostream>
 using  namespace std;
-int power_of(int base,int exponent ){
+double power_of(int base,int exponent ){
     int result=1;
     for(int i=0 ; i < exponent; i++){
         result*=base;
@@ -8,7 +8,7 @@ int power_of(int base,int exponent ){
     return result;
 }
 
-int factorial_of(int n){
+double factorial_of(int n){
     int factorial=1;
     if(n==0){
         return 1;
@@ -23,8 +23,8 @@ int factorial_of(int n){
 
 
 
-float calculate_e(int terms,int x){
-    float result=0;
+double calculate_e(int terms,int x){
+    double result=0;
     for (int i=0 ;i <=terms;i++){
         result +=((power_of(x,i))/factorial_of(i));
     }
@@ -35,7 +35,7 @@ float calculate_e(int terms,int x){
 
     int x =0;
     int step=0;
-    float result=0;
+    double result=0;
     cout<<"请输入你要计算e的几次方: "<<endl;
     cin>>x;
     cout<<"请输入你要迭代的次数："<<endl;

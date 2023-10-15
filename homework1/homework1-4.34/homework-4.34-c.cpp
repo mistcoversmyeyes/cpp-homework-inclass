@@ -31,17 +31,28 @@ double calculate_e(int terms,int x){
     return result;
 }
  
- int main(){
+int main(){
 
-    int x =0;
-    int step=0;
-    double result=0;
-    cout<<"请输入你要计算e的几次方: "<<endl;
-    cin>>x;
-    cout<<"请输入你要迭代的次数："<<endl;
-    cin>>step;
-    result=calculate_e(step,x);
-    cout<<"e的n次方的近似值是: "<<result<<endl;
+    int x = 0;
+    int step = 0;
+    double result = 0;
+    char continueChoice;
+
+    do {
+        cout << "请输入你要计算e的几次方: " << endl;
+        cin >> x;
+        cout << "请输入你要迭代的次数：" << endl;
+        cin >> step;
+
+        result = calculate_e(step, x);
+        cout << "e的n次方的近似值是: " << result << endl;
+
+        cout << "您想要继续计算吗? (y/n): ";
+        cin >> continueChoice;
+    } while (continueChoice == 'y' || continueChoice == 'Y');
+
+    return 0;
 }
+
 
 

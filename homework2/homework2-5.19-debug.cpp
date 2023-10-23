@@ -16,5 +16,5 @@ double get_i_term(int i){
     return value_of_term_i;
 }
 int main(){
-    cout<<get_i_term(1)<<endl;
+    cout<<get_i_term(0)<<endl;
 }

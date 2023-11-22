@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-typedef struct triangle {
+struct triangle {
     double side1;
     double side2;
 };

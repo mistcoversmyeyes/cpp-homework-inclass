@@ -5,7 +5,7 @@
 
 using namespace std;
 //初始化赌徒银行的钱数;
-int bankBalance = 1000;
+int bankBalance = 1000;//全局变量使得后面的所有更改均会改变银行的钱数，且不需要传参
 int dice_roll();
 bool if_win(int guess_dice);
 bool if_want_to_continue();
@@ -74,10 +74,12 @@ void single_game(int &bankBalance){
         cin>>lay;
     }while(lay > bankBalance);
     //获取这局用户猜测的点数;
-    do{
-        cout<<"请输入你猜测的点数: ";
-        cin>>guess_dice;
-    }while(guess_dice > 6||guess_dice < 1);
+
+    //do{
+    //    cout<<"请输入你猜测的点数: ";
+    //    cin>>guess_dice;
+    //}while(guess_dice > 6||guess_dice < 1);
+    
     //利用函数判断赌徒是否猜对了点数;
         //if    true
         //  bankBalance + lay
